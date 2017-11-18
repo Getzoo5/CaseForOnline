@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}"/>
+<meta name="description" content="{dede:global.cfg_description/}"/>
+<link href="{dede:global.cfg_basehost/}/skin/style/style.css" rel="stylesheet" type="text/css"/>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/FormValid.js"></script>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/jquery.jBox-2.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/menu.js"></script>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/jQselect.js"></script>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/jquery.lazyload.js"></script>
+<script language="JavaScript" type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/jquery.jslides.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_basehost/}/skin/style/urlredirect.js"></script>
+<!--[if IE 6]><script type="text/javascript" src="js/DD_belatedPNG.js"></script><![endif]-->
+<script>
+$(function() {
+    if (window.PIE) {
+        $('.bullet').each(function() {
+            PIE.attach(this);
+        });
+    }
+});
+</script>
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<div style=" height:20px;"></div>
+<div class="cai">
+  <div class="wedding">
+    <div class="slider"> <span id="left" class="end"><img src="{dede:global.cfg_basehost/}/skin/images/left.png"/></span><span id="right"><img src="{dede:global.cfg_basehost/}/skin/images/right.png"/></span> </div>
+    <div class="ipro" id="ipro2">
+      <div class="main">
+        <ul class="">
+{dede:arclist row='6' typeid='1'}
+          <li> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"  width="223" height="298"/>
+            <p class="iproname">—[field:title/]—</p>
+            <span class="moreview">—[field:description function="cn_substr(@me,100)"/]—</span> </a>
+		  </li>
+{/dede:arclist}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="store">
+  <p class="proname">拍摄地点</p>
+  <div class="kecd">
+    <p class="pronad"> filming locations</p>
+  </div>
+  <div class="hair">
+    <ul>
+{dede:arclist row='4' typeid='5'}
+      <li> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"  width="240" height="320" />
+        <p>—[field:title/]—</p>
+        <span>[field:description function="cn_substr(@me,200)"/]...</span> </a>
+	  </li>
+{/dede:arclist}
+    </ul>
+  </div>
+  <p class="more">{dede:type typeid='5'}<a href="[field:typelink/]" title="查看更多"> 查看更多</a>{/dede:type}</p></div>
+<div class="clear"></div>
+<div class="track">
+  <p class="proname">新闻资讯</p>
+  <div class="kec">
+    <p class="prona"><span>NEWS CENTER</span></p>
+  </div>
+  <div class="news">
+    <ul class="newsmain">
+{dede:arclist    row='2'       typeid='6'    titlelen='300'            }
+      <li><a href="[field:arcurl/]" title="[field:title/]">
+        <div class="time"><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><font>[field:pubdate function="MyDate('Y',@me)"/]</font></div>
+        <div class="newsli_r">
+          <p class="newsli_rt"><span class="fl">[field:title/]</span></p>
+          <em>点击量：[field:click/]</em>
+          <p>[field:description function="cn_substr(@me,255)"/]...</p>
+        </div>
+        </a>
+	  </li>
+{/dede:arclist}
+    </ul>
+    <p class="picimg"><img src="{dede:global.cfg_basehost/}/skin/images/bg3.jpg" alt="新闻资讯" width="342" height="320" /></p>
+  </div>
+  <div class="clear"></div>
+  <p class="more">{dede:type typeid='6'}<a href="[field:typelink/]" title="查看更多"> 查看更多</a>{/dede:type}</p></div>
+<div class="clear"></div>
+<div class="case">
+  <div class="casefra">
+    <div class="caseleft">
+      <p class="casename">
+        <label>ＭＹ Plan</label>
+        <span>Case center</span></p>
+    {dede:type typeid='9'}<a class="casemore" href="[field:typelink/]" title="查看更多"> 查看更多</a>{/dede:type}</div>
+    <ul class="caseul">
+{dede:arclist    row='3'     typeid='9'                } 
+	  <li><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"  width="210" height="280" />
+        <p>[field:title/]</p>
+        </a>
+	  </li>
+{/dede:arclist}
+    </ul>
+  </div>
+</div>
+<div class="footclear"></div>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".fyRight img").lazyload({
+			threshold: 20,
+			placeholder: "{dede:global.cfg_basehost/}/skin/images/blank.gif",
+			effect: showeffect
+		})
+	});
+</script>
+<div class="footclear"></div>
+<div class="f_link">
+  <div class="main"><span>友情链接：</span>
+    <div class="d_linleft"><a href="http://www.daiwobo.com/" target="_blank">大蜗宝纯姜洗发水</a>  | <a href="http://www.51haq.com/">奇瑞教育</a>  | <a href="http://www.gzdamai.com/">vr全景拍摄</a></div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

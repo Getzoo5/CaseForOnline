@@ -1,0 +1,13 @@
+@charset "gb2312";
+/* CSS Document */
+
+.menu ul li.qwq{float: left;display: inline-block;width: 177px;margin: 0;border-bottom: 1px solid #c4d8d5;}
+.menu li.qwq div a {position: relative;display: inline-block;width: 157px;text-align: left;color: #095c52;font: 14px/39px 'Microsoft Yahei';background: url(../images/menui.gif) 150px center no-repeat;padding-left: 20px;}
+.menu li.qwq a:hover{	color: #fff;background: url(../images/menuii.gif) #3cb19f 150px center no-repeat;}
+.menu li.qwq div.qwe{float:left;display:none;position: absolute;left: 183px;z-index: 12;width: 300px;opacity:0.8;}
+.menu li.qwq:hover .qwe{display: inline-block;}
+.menu li.qwq:hover .qwe div{width:auto;height:auto; margin-top:-40px;}
+.menu li.qwq:hover .qwe div ul{ position:absolute;width:300px; background:url(../images/menubg1.png) right bottom #f67ea4 no-repeat;}
+.menu li.qwq:hover .qwe div ul li{width:auto;height:auto;}
+.menu li.qwq .qwe li a{ border-bottom:dotted #fff 1px; display:block; color:#FFF; width:280px;background: url(../images/menuii1.gif) 270px center no-repeat;}
+.menu li.qwq .qwe li a:hover{ color:#dd77aa; background: url(../images/menui1.gif) #FFF 270px center no-repeat;}
